@@ -269,7 +269,7 @@ function formValidation() {
 		var $cvv = $('#cvv');
 		var $cvvLabel = $('label[for=cvv]');
 		$cvvLabel.css('color', $originalColor);
-		if($('#payment').val() === 'credit card' && $cvv.val().length !== 3 || isNaN(parseInt($cvv.val())) ){
+		if($('#payment').val() === 'credit card' && ( $cvv.val().length !== 3 || !$.isNumeric($cvv.val()) )){
 			$cvvLabel.css('color', $validationColor);
 			notValid++;
 		}
