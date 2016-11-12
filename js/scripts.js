@@ -167,8 +167,8 @@ function calculateActivities(amount, operation) {
 * Show payment method depend on user selection.
 */
 function paymentInfo() {
-	var $payment = $('#payment'); 
-	$('#credit-card').hide();
+	var $payment = $('#payment');
+	$payment.val('credit card');
 	$('div p:contains("PayPal")').hide();
 	$('div p:contains("Bitcoin")').hide();
 
